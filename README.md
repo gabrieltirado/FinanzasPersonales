@@ -1,4 +1,4 @@
-Aplicacion FP
+FP
 ==================
 
 Aplicación Java, para control de las finanzas personales.
