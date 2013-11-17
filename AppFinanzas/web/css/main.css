@@ -1,9 +1,14 @@
 .fila {
     float: left;
     width: 100%;
+    background: #58c03c;
 }
 
 .columna {
     float: left;
-    width: 33.33%;
+    width: 25%;
+}
+
+.g-form input {
+    width: 80%;
 }

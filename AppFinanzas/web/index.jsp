@@ -12,6 +12,11 @@
         <section>
             <form class="g-form">
                 <div class="fila">
+                    <div class="columna">Fecha</div>
+                    <div class="columna">Concepto</div>
+                    <div class="columna">Valor</div>
+                </div>
+                <div class="fila">
                     <div class="columna">
                         <input type="date" id="inputFecha" maxlength="100" placeholder="Fecha" required>
                     </div>
