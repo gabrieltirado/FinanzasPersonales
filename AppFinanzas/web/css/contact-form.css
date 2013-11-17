@@ -7,7 +7,7 @@ h1 {
 	background: #58c03c;
 	margin: 0 auto;
 	padding: 30px;
-	width: 310px;
+/*	width: 310px;*/
 	color: #fff;
 	font-family: 'Segoe UI Light', 'Segoe UI', 'Open sans', Arial, Sans;
 	font-size: 16px;
@@ -28,12 +28,12 @@ h1 {
 
 .g-form select,.g-form textarea,.g-form input[type="text"],.g-form input[type="password"],.g-form input[type="datetime"],.g-form input[type="datetime-local"],.g-form input[type="date"],.g-form input[type="month"],.g-form input[type="time"],.g-form input[type="week"],.g-form input[type="number"],.g-form input[type="email"],.g-form input[type="url"],.g-form input[type="search"],.g-form input[type="tel"],.g-form input[type="color"],.g-form .uneditable-input {
 	font-size: 14px;
-	border: 0;
+	
 	background: #fff;
 	margin: 0 0 20px;
 	padding: 8px 10px;
 	display: block;
-	width: 290px;
+	/*width: 290px;*/
 }
 
 .g-form select:focus,.g-form textarea:focus,.g-form input[type="text"]:focus,.g-form input[type="password"]:focus,.g-form input[type="datetime"]:focus,.g-form input[type="datetime-local"]:focus,.g-form input[type="date"]:focus,.g-form input[type="month"]:focus,.g-form input[type="time"]:focus,.g-form input[type="week"]:focus,.g-form input[type="number"]:focus,.g-form input[type="email"]:focus,.g-form input[type="url"]:focus,.g-form input[type="search"]:focus,.g-form input[type="tel"]:focus,.g-form input[type="color"]:focus,.g-form .uneditable-input:focus {

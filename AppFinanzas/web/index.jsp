@@ -6,9 +6,27 @@
         <title>Finanzas Personales</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/contact-form.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <section>
+            <form class="g-form">
+                <div class="fila">
+                    <div class="columna">
+                        <input type="date" id="inputFecha" maxlength="100" placeholder="Fecha" required>
+                    </div>
+                    <div class="columna">
+                        <input type="text" id="inputConcepto" maxlength="100" placeholder="Concepto" required>
+                    </div>            
+                    <div class="columna">
+                        <input type="number" id="inputValor" maxlength="100" placeholder="Valor" required>
+                    </div>    
+                    <div class="columna g-form-controls">
+                        <button type="submit">Guardar</button>
+                        <button type="reset">cancelar</button>
+                    </div>
+                </div>
+            </form>
             <h1></h1>
             <form class="g-form" action="" method="post">
                 <h2></h2>

@@ -1,0 +1,9 @@
+.fila {
+    float: left;
+    width: 100%;
+}
+
+.columna {
+    float: left;
+    width: 33.33%;
+}
