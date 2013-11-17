@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <title>Finanzas Personales</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/contact-form.css">
@@ -14,13 +14,13 @@
                 <h2></h2>
 
                 <label for="inputFecha">Fecha</label>
-                <input type="text" id="inputFecha" maxlength="100" placeholder="John F. Cannedy" required>
+                <input type="date" id="inputFecha" maxlength="100" placeholder="Fecha" required>
 
                 <label for="inputConcepto">Concepto</label>
-                <input type="email" id="inputConcepto" maxlength="100" placeholder="yourname@yourcomapny.com" required>
+                <input type="text" id="inputConcepto" maxlength="100" placeholder="Concepto" required>
 
-                <label for="inputWebsite">Valor</label>
-                <input type="url" maxlength="100" placeholder="http://" required>
+                <label for="inputValor">Valor</label>
+                <input type="number" id="inputValor" maxlength="100" placeholder="Valor" required>
 
     <!--            <label for="inputAffiliation">Affiliation</label>
                 <input type="text" id="inputAffiliation" placeholder="Your organization">-->
