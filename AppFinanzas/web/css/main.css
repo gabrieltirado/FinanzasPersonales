@@ -12,3 +12,12 @@
 .g-form input {
     width: 80%;
 }
+
+div.seccionGastos table {
+    border-collapse: collapse;
+    width: 99.9%;
+}
+
+div.seccionGastos table tr td {
+    border: 1px solid #000;
+}

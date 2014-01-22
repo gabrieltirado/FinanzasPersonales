@@ -83,21 +83,15 @@ h1 {
 .g-form button[type="button"],.g-form input[type="button"],.g-form button[type="reset"],.g-form input[type="reset"],.g-form button[type="submit"],.g-form input[type="submit"] {
 	border: 0;
 	background: #fff;
-	color: #58c03c;
-	padding: 5px 20px;
-	margin-right: 10px;
-	min-width: 145px;
+	color: #58c03c;	
 }
 
 .g-form button[type="reset"],.g-form input[type="reset"] {
-	background: url('../images/x.png') #ffffff 10px center no-repeat;
-	padding-left: 44px;
-	margin-right: 0;
+	background: url('../images/x.png') #ffffff 10px center no-repeat;	
 }
 
 .g-form button[type="submit"],.g-form input[type="submit"] {
-	background: url('../images/send.png') #ffffff 10px center no-repeat;
-	padding-left: 44px;
+	background: url('../images/send.png') #ffffff 10px center no-repeat;	
 }
 
 .g-form button:hover,.g-form input:hover,.g-form button:focus,.g-form input:focus,.g-form button:active,.g-form input:active {
