@@ -60,7 +60,7 @@ public class Gastos extends HttpServlet {
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");            
             
             request.setAttribute("fecha", dateFormat.format(date));
-            request.getRequestDispatcher("gasto.jsp").forward(request, response);
+            request.getRequestDispatcher("gastos.jsp").forward(request, response);
 
         } catch (Exception exception) {
             out.println(exception.getCause());
@@ -85,7 +85,7 @@ public class Gastos extends HttpServlet {
 
     public String getGastos(DataBase db, Connection conn) {
         try {
-            String consulta = "select FECHA, CONCEPTO, VALOR, NOTAS from AF_GASTOS_DIARIOS";
+            String consulta = "select FECHA, CONCEPTO, VALOR, NOTAS from AF_GASTOS_DIARIOS order by fecha asc";
             //consulta = "select * from DBINDEXADOR.CIUDADES_CTC;";
             ResultSet Select = db.Select(conn, consulta);
 

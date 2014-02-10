@@ -4,11 +4,11 @@ h1 {
 }
 
 .g-form {
-	background: #58c03c;
+	/*background: #58c03c;*/
 	margin: 0 auto;
 	padding: 30px;
 /*	width: 310px;*/
-	color: #fff;
+	color: #222;
 	font-family: 'Segoe UI Light', 'Segoe UI', 'Open sans', Arial, Sans;
 	font-size: 16px;
 	line-height: 1.5em;
@@ -50,7 +50,7 @@ h1 {
 	-ms-appearance: none;
 	-moz-appearance: none;
 	background: none;
-	border: 1px solid #fff;
+	border: 1px solid #000;
 	outline: none;
 	width: 20px;
 	height: 20px;
@@ -84,14 +84,6 @@ h1 {
 	border: 0;
 	background: #fff;
 	color: #58c03c;	
-}
-
-.g-form button[type="reset"],.g-form input[type="reset"] {
-	background: url('../images/x.png') #ffffff 10px center no-repeat;	
-}
-
-.g-form button[type="submit"],.g-form input[type="submit"] {
-	background: url('../images/send.png') #ffffff 10px center no-repeat;	
 }
 
 .g-form button:hover,.g-form input:hover,.g-form button:focus,.g-form input:focus,.g-form button:active,.g-form input:active {

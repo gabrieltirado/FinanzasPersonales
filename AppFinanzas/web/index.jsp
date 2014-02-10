@@ -22,9 +22,9 @@
                 </div>
                 <div class="top-nav">
                     <ul>
-                        <li class="active"><a href="index.html"> <span> </span></a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#">Fonts</a></li>
+                        <li class="active"><a href="#"> <span> </span></a></li>
+                        <li><a href="Gastos">Gastos</a></li>
+                        <li><a href="Presupuesto">Presupuesto</a></li>
                         <li><a href="#">Templates</a></li>
                         <li><a href="icons.html">Icons</a></li>
                         <li><a href="#">Wordpress</a></li>
