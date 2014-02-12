@@ -8,6 +8,10 @@
         <servlet-name>Presupuesto</servlet-name>
         <servlet-class>co.com.finanzaspersonales.Presupuesto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CuentasPorCobrar</servlet-name>
+        <servlet-class>co.com.finanzaspersonales.CuentasPorCobrar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Gastos</servlet-name>
         <url-pattern>/Gastos</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>Presupuesto</servlet-name>
         <url-pattern>/Presupuesto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CuentasPorCobrar</servlet-name>
+        <url-pattern>/CuentasPorCobrar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

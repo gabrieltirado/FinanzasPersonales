@@ -21,3 +21,27 @@ div.seccionGastos table {
 div.seccionGastos table tr td {
     border: 1px solid #000;
 }
+
+div.seccionCuentas table {
+    border-collapse: collapse;
+    width: 99.9%;
+}
+
+div.seccionCuentas table tr th {
+    border: 1px solid #000;
+    background: #000;
+    opacity: 0.6;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+} 
+
+div.seccionCuentas table tr td {
+    border: 1px solid #000;
+    text-align: center;
+} 
+
+div.seccionCuentas input {
+    color: #222;
+    border: 1px solid #CECECE;
+    font-family: 'Open Sans', sans-serif;
+}
