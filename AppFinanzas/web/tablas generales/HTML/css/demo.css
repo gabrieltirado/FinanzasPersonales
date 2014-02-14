@@ -1,0 +1,36 @@
+
+#accordion {
+	width:100%;
+	margin:0px auto;
+	text-align:left;
+}
+
+#accordion h1 {
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:17px;
+	color:#00ABC7;
+	text-align:left;
+	padding:2px 0px 10px 30px;
+	cursor: pointer;
+	background: url(../images/mas.png) no-repeat 10px 8px #EDEDED;
+	width:auto;
+	height:25px;
+	margin: 0 0 0 0;
+
+}
+#accordion h1.active {
+	background: url(../images/menos.png) no-repeat 10px 8px #EDEDED;
+	color:#999;
+}
+
+#accordion div {
+	margin:0px;
+	padding:10px;
+	display:none;
+}
+
+blockquote {
+	padding:5px 20px;
+}
+
+

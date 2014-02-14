@@ -1,0 +1,732 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table td {
+	padding:5px;
+}
+table td.Nopad {
+	padding:0px;
+}
+
+.Clear {
+	width:100%;
+	height:10px;
+	clear:both;
+}
+/*Estilos Generales*/
+
+#WrapTransacciones-General {
+	width:690px;
+	height:auto;
+	margin: 0 auto;
+}
+#WrapTransacciones-General.BigTable {
+	width:1300px;
+	height:auto;
+	margin: 0 auto;
+}
+#WrapTransacciones-General.Ventana {
+	width:500px;
+	height:auto;
+	margin: 0 auto;
+}
+#WrapTransacciones-General.VentanaLarge {
+	width:800px;
+	height:auto;
+	margin: 0 auto;
+}
+#WrapTransacciones-General.Lightbox {
+	width:400px;
+	height:auto;
+	margin: 0 auto;
+}
+
+/*PADDINGS*/
+#WrapTransacciones-General .PaddingFull {
+	padding:5px;
+}
+#WrapTransacciones-General .PaddingTop {
+	padding-top:5px;
+}
+#WrapTransacciones-General .PaddingLeft {
+	padding-left:15px;
+}
+#WrapTransacciones-General .PaddingRight {
+	padding-right:5px;
+}
+#WrapTransacciones-General .FloatLeft {
+	float:left;
+}
+#WrapTransacciones-General .FloatRight {
+	float: right;
+}
+#WrapTransacciones-General .FloatCenter {
+	margin:0px auto;
+}
+
+/*FIN PADDINGS*/
+
+/*DIVS*/
+#WrapTransacciones-General .DivFull{
+	width:100%;
+	height:auto;
+	float:left;
+	border:1px solid #F00;
+}
+#WrapTransacciones-General .DivMedio {
+	width:50%;
+	height:auto;
+	float:left;
+}
+#WrapTransacciones-General .DivTercio{
+	width:33%;
+	height:auto;
+	float:left;
+}
+#WrapTransacciones-General .DivCuarto {
+	width:25%;
+	height:auto;
+	float:left;
+	border:1px solid #F00;
+}
+/*FIN DIVS*/
+
+/*ICONOS*/
+#WrapTransacciones-General .IconHome {
+	width:auto;
+	height:14px;
+	float:right;
+	background:url(../images/icon_home.png) top left no-repeat;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:17px;
+	color:#767676;
+	text-align:left;
+	padding-left: 27px;
+	line-height:12px;
+}
+#WrapTransacciones-General .Imprimir a {
+	width:75px;
+	height:30px;
+	float:right;
+	background:url(../images/icon_imprimir.png) top right no-repeat;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#bdbdbd;
+	text-align:left;
+	line-height:22px;
+	cursor:pointer;
+	text-decoration:none;
+}
+#WrapTransacciones-General .Imprimir a:hover {
+	text-decoration:underline;
+}
+#WrapTransacciones-General .IconWarning {
+	width:40px;
+	height:60px;
+	float:left;
+	display:block;
+	background:url(../images/advertencia.png) top left no-repeat;
+}
+/*FIN ICONOS*/
+
+/*TITULOS*/
+#WrapTransacciones-General h1 {
+	width:auto;
+	height:35px;
+	background:#7E8182;
+	margin: 0 auto;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:18px;
+	color:#FFFFFF;
+	text-align:left;
+	padding:15px 0px 10px 10px;
+}
+#WrapTransacciones-General h1 span {
+	width:auto;
+	height:20px;
+	background:#7E8182;
+	margin: 0 auto;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:left;
+	padding:15px 0px 10px 10px;
+}
+#WrapTransacciones-General h1 strong {
+	font-weight:bold;
+}
+#WrapTransacciones-General h2 {
+	font-family: 'Conv_DINOffc';
+	font-size:12px;
+	color:#777;
+	text-align:left;
+	line-height:15px;
+}
+#WrapTransacciones-General h2 span {
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:17px;
+	color:#767676;
+	text-align:left;
+	line-height:0px;
+}
+#WrapTransacciones-General h2 strong {
+	font-weight:bold;
+}
+#WrapTransacciones-General h3 {
+	font-family: 'Conv_DINOffc';
+	font-size:12px;
+	color:#737373;
+	line-height:15px;
+}
+#WrapTransacciones-General h3 a {
+	font-family: 'Conv_DINOffc';
+	color:#00ABC7;
+	text-decoration:underline;
+}
+#WrapTransacciones-General h3 a:hover {
+	color:#00329C;
+	text-decoration:none;
+}
+#WrapTransacciones-General h3 strong {
+	font-weight:bold;
+}
+#WrapTransacciones-General h4 {
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:15px;
+	color:#FFFFFF;
+	line-height:16px;
+}
+#WrapTransacciones-General h4 span {
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:15px;
+	color:#767676;
+}
+#WrapTransacciones-General h4 a {
+	font-family: 'Conv_AverageSans-Regular';
+	color:#00ABC7;
+	text-decoration:underline;
+}
+#WrapTransacciones-General h4 a:hover {
+	color:#00329C;
+	text-decoration:none;
+}
+#WrapTransacciones-General h4 strong {
+	font-weight:bold;
+}
+#WrapTransacciones-General h5 {
+	font-family: 'Conv_DINOffc';
+	font-size:12px;
+	color:#FFF;
+	line-height:15px;
+	padding:4px 0px 4px 10px;
+	background:url(../images/arrow_right.gif) top right no-repeat #00B9F6;
+}
+/*FIN TITULOS*/
+
+/*GRISES */
+#WrapTransacciones-General table td.GrisUno {
+	background:#f7f7f7;
+	padding:5px;
+}
+#WrapTransacciones-General table td.GrisDos {
+	background:#7E8182;
+	padding:5px;
+}
+#WrapTransacciones-General table td.GrisTres {
+	background:#DBDBDB;
+	padding:5px;
+}
+#WrapTransacciones-General table td.GrisCuatro {
+	background:#E6E6E6;
+	padding:5px;
+}
+#WrapTransacciones-General table td.GrisCinco {
+	background:#EDEDED;
+}
+#WrapTransacciones-General table td.GrisSeis {
+	background:#F5F5F5;
+}
+#WrapTransacciones-General table td.GrisSiete {
+	background:#F6F6F6;
+}
+#WrapTransacciones-General table td.AzulUno{
+	background:#00ABC7;
+}
+#WrapTransacciones-General table td.AzulDos{
+	background:#00C2E0;
+}
+/*FIN GRISES */
+
+/*FORMULARIO */
+#WrapTransacciones-General select {
+	background:#FFF;
+	border:1px solid #D7D7D7;
+	font-family: 'Conv_DINOffc';
+	font-size:11px;
+	color:#9b9b9b;
+	padding:5px;
+}
+
+#WrapTransacciones-General input {
+	background:#FFF;
+	border:1px solid #D7D7D7;
+	font-family: 'Conv_DINOffc';
+	font-size:11px;
+	color:#9b9b9b;
+	padding:5px;
+}
+/*FIN FORMULARIO */
+
+/*LINEAS*/
+#WrapTransacciones-General .LineDelgada {
+	width:100%;
+	height:10px;
+	margin:0px auto;
+	clear:both;
+	border-top:1px solid #EBEBEB;
+}
+#WrapTransacciones-General .LineGruesa {
+	width:95%;
+	height:10px;
+	margin:0px auto;
+	clear:both;
+	border-top:3px solid #D2D2D2;
+}
+#WrapTransacciones-General .LineGruesaFull {
+	width:100%;
+	margin:0px auto;
+	clear:both;
+	border-top:3px solid #D2D2D2;
+}
+#WrapTransacciones-General .LineaBottom {
+	border-bottom:1px solid #EBEBEB;
+}
+#WrapTransacciones-General .LineaGeneral {
+	border:1px solid #EBEBEB;
+}
+#WrapTransacciones-General .LineaLados {
+	border-left:1px solid #FFF;
+	border-right:1px solid #FFF;
+}
+#WrapTransacciones-General .LineaLadosDark {
+	border-left:1px solid #CCC;
+	border-right:1px solid #CCC;
+}
+
+/*FIN LINEAS*/
+
+/*TABS*/
+#WrapTransacciones-General .Tab {
+	width:20%;
+	height:50px;
+	background:#00C2E0;
+	border-top:5px solid #EFEFEF;
+	border-bottom:5px solid #00ABC7;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:14px;
+	color:#FFF;
+	text-align:center;
+	padding-top:10px;
+	line-height:16px;
+}
+#WrapTransacciones-General table td.Tab a {
+	color:#FFF;
+	text-decoration:none;
+}
+
+#WrapTransacciones-General table td.TabSelect {
+	background:#00ABC7;
+	border-top:5px solid #00ABC7;
+	border-bottom:5px solid #00ABC7;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:14px;
+	color:#FFF;
+	text-align:center;
+	padding-top:10px;
+	line-height:16px;
+}
+#WrapTransacciones-General table td.TabVacia {
+	background:#FFF;
+	border-bottom:5px solid #00ABC7;
+}
+
+/*FIN TABS*/
+
+/*BOTONES*/
+#WrapTransacciones-General .IconCalendar a {
+	width:23px;
+	height:24px;
+	display:block;
+	cursor:pointer;
+	text-indent:-99999px;
+	background:url(../images/icon_archive.png) top center no-repeat;
+}
+#WrapTransacciones-General .BotonYellow a {
+	padding:6px 20px 6px 20px;
+	background:#E3D829;
+	color:#00329C;
+	text-align:center;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:14px;
+}
+#WrapTransacciones-General .BotonYellow a:hover {
+	background:#00329C;
+	color:#FFF;
+	text-decoration:none;
+}
+#WrapTransacciones-General .BotonAnterior a {
+	width:37px;
+	height:36px;
+	display:block;
+	cursor:pointer;
+	text-indent:-99999px;
+	float:left;
+	background:url(../images/anterior.gif) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .BotonAnterior a:hover {
+	background:url(../images/anteriorOver.gif) 0px 0px no-repeat;
+}
+
+#WrapTransacciones-General .BotonSiguiente a {
+	width:37px;
+	height:36px;
+	display:block;
+	cursor:pointer;
+	text-indent:-99999px;
+	float:left;
+	background:url(../images/siguiente.gif) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .BotonSiguiente a:hover {
+	background:url(../images/siguienteOver.gif) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .BlueArrow  {
+	width:8px;
+	height:24px;
+	display:block;
+	float:left;
+	background:url(../images/arrow_right.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Erre  {
+	width:16px;
+	height:16px;
+	display:block;
+	margin:0px auto;
+	background:url(../images/IconoR.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Inversion  {
+	width:17px;
+	height:14px;
+	display:block;
+	float:left;
+	background:url(../images/inversion.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Carro  {
+	width:17px;
+	height:14px;
+	display:block;
+	float:left;
+	background:url(../images/carro.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Pension  {
+	width:17px;
+	height:14px;
+	display:block;
+	float:left;
+	background:url(../images/pension2.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Educacion {
+	width:17px;
+	height:14px;
+	display:block;
+	float:left;
+	background:url(../images/educacion.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .Viaje  {
+	width:17px;
+	height:14px;
+	display:block;
+	float:left;
+	background:url(../images/viaje.png) 0px 0px no-repeat;
+}
+
+#WrapTransacciones-General .DownArrow a {
+	width:13px;
+	height:20px;
+	display:block;
+	cursor:pointer;
+	text-indent:-99999px;
+	float:right;
+	background:url(../images/icon_arrowdown.gif) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .DownArrow a:hover {
+	background:url(../images/icon_arrowdown2.gif) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .BotonAyuda a {
+	width:20px;
+	height:21px;
+	display:block;
+	cursor:pointer;
+	text-indent:-99999px;
+	float:right;
+	background:url(../images/icon_quest.png) 0px 0px no-repeat;
+}
+#WrapTransacciones-General .BotonAyuda a:hover {
+	background:url(../images/icon_questOver.png) 0px 0px no-repeat;
+}
+
+/*FIN BOTONES*/
+
+/*LIGHTBOX UNO*/
+#WrapTransacciones-LightboxUno {
+	width:705px;
+	height:600px;
+	margin:0px auto;
+	clear:both;
+}
+#WrapTransacciones-LightboxUno .BtnCerrar a {
+	width:705px;
+	height:36px;
+	display:block;
+	cursor:pointer;
+	margin:0px auto;
+	clear:both;
+	text-indent:-99999px;
+	background:url(../images/btn_cerrar.png) no-repeat 669px 0px;
+}
+#WrapTransacciones-LightboxUno .BtnCerrar a:hover {
+	background:url(../images/btn_cerrar.png) no-repeat 669px -39px;
+}
+#WrapTransacciones-LightboxUno #BlueBox {
+	width:687px;
+	height:564px;
+	margin:0px auto;
+	clear:both;
+	border-left:18px solid #26A9C5;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox{
+	width:300px;
+	height:auto;
+	float:left;
+	padding:50px 0px 0px 65px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox h2 {
+	padding:0px 0px 45px 0px;
+	color:#0a54a2;
+	text-align:left;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:24px;
+	line-height:24px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox h4 {
+	padding:0px 0px 20px 0px;
+	color:#727272;
+	text-align:left;
+	text-decoration:none;
+	font-family: 'Conv_Armata-Regular';
+	font-size:10px;
+	line-height:12px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna {
+	width:140px;
+	height:200px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna.Left {
+	float:left;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna.Right {
+	float:right;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna h3 {
+	color:#696969;
+	text-align:left;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:13px;
+	line-height:14px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna input {
+	color:#26A9C5;
+	text-align:left;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:12px;
+	line-height:14px;
+	width:138px;
+	height:33px;
+	border:1px solid #D2D2D2;
+	background:#FFF;
+}
+#WrapTransacciones-LightboxUno #BlueBox #LeftBox .Columna select {
+	color:#26A9C5;
+	text-align:left;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:12px;
+	line-height:14px;
+	width:138px;
+	height:37px;
+	border:1px solid #D2D2D2;
+	background:#FFF;
+}
+#WrapTransacciones-LightboxUno .BotonNorton a {
+	width:78px;
+	height:46px;
+	display:block;
+	text-indent:-99999px;
+	cursor:pointer;
+	background:url(../images/norton.gif) no-repeat 0px 0px;
+}
+#WrapTransacciones-LightboxUno .BotonBlue a {
+	padding:10px 47px 9px 48px;
+	background:#009FDE;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:14px;
+	display:block;
+}
+#WrapTransacciones-LightboxUno .BotonBlue a:hover {
+	background:#0053A6;
+	color:#FFF;
+	text-decoration:none;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox{
+	width:245px;
+	height:auto;
+	float:right;
+	padding:50px 50px 0px 0px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox {
+	width:243px;
+	height:238px;
+	margin:0px auto;
+	border:1px solid #D2D2D2;
+	background:url(../images/vigilado.gif) no-repeat 185px 32px;
+	padding:20px 0px 0px 0px
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul {
+	width:118px;
+	margin:0px auto;
+	overflow: hidden;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul h3 {
+	color:#0a54a2;
+	text-align:left;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:13px;
+	line-height:24px;
+	display:block;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul li {
+	color:#FFF;
+	text-align:center;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:13px;
+	line-height:34px;
+	display:block;
+	float:left;
+	width:38px;
+	height:36px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul li a {
+	width:38px;
+	height:36px;
+	background:#0053A6;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:13px;
+	display:block;
+	padding:0px 0px 0px 0px;
+	border:2px solid #FFF;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul li.limpiar a {
+	width:76px;
+	height:36px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #TecladoBox ul li a:hover {
+	background:#0061C0;
+	text-decoration:none;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #EnlacesBox {
+	width:215px;
+	height:auto;
+	margin:0px auto;
+	padding:50px 0px 0px 0px
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #EnlacesBox ul {
+	width:215px;
+	margin:0px auto;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #EnlacesBox ul li {
+	color:#26a9c5;
+	text-align:left;
+	font-family: 'Conv_AverageSans-Regular';
+	font-size:15px;
+	line-height:20px;
+	display:block;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #EnlacesBox ul li a {
+	color:#26a9c5;
+	display:block;
+	text-decoration:none;
+	background:url(../images/itemLogin.gif) no-repeat 0px 0px;
+	padding:0px 0px 14px 30px;
+}
+#WrapTransacciones-LightboxUno #BlueBox #RightBox #EnlacesBox ul li a:hover {
+	text-decoration:underline;
+}
+
+
+/*FIN LIGHTBOX UNO*/
+
+
+
+
+.flecha { border-style: solid; border-width: 15px; border-color: #F00 #00F #0F0 #FF0; width: 0; float:left;}
+.derecha { border-color: #FFF #FFF #FFF #00B9F6; }
