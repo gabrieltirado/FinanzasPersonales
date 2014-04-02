@@ -7,11 +7,7 @@ package co.com.finanzaspersonales;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 /**
@@ -21,30 +17,29 @@ import java.util.Properties;
 public class DataBase {
 
     Properties prop = new Properties();
-    String FILE_PROPERTIES = "/wamp/www/PDI/XML/EditXML/src/java/properties/config.properties";
+    String FILE_PROPERTIES = "../../properties/config.properties";
 
     public Connection getConnectionDataBase() throws SQLException, IOException {
         Connection conexion = null;
 
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            prop.load(new FileInputStream(FILE_PROPERTIES));
+            Class.forName("com.mysql.jdbc.Driver");
+            /*prop.load(new FileInputStream(FILE_PROPERTIES));
 
-            String database = prop.getProperty("database"),
-                    dbuser = prop.getProperty("dbuser"),
-                    dbpassword = prop.getProperty("dbpassword"),
-                    dbport = prop.getProperty("dbport"),
-                    dbSID = prop.getProperty("dbSID");
+             String database = prop.getProperty("database"),
+             dbuser = prop.getProperty("dbuser"),
+             dbpassword = prop.getProperty("dbpassword"),
+             dbport = prop.getProperty("dbport"),
+             dbSID = prop.getProperty("dbSID");*/
 
-            conexion = DriverManager.getConnection("jdbc:oracle:thin:@" + database + ":" + dbport + ":" + dbSID, dbuser, dbpassword);
+            /*INSERT INTO `app_finanzas_personales`.`usuarios` (`id`, `nombre`, `apellidos`, `username`, `password`, `email`) VALUES (NULL, '', '', '', '', '');*/
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/app_finanzas_personales?zeroDateTimeBehavior=convertToNull&user=root&password=");
 
-        } catch (FileNotFoundException exception) {
-            System.out.println("Archivo no encontrado: " + exception.getCause());
-        } catch (ClassNotFoundException e1) {
-            System.out.println("ERROR:No encuentro el driver de la BD: " + e1.getMessage() + "<br />");
-        } catch (SQLException e2) {
-            System.out.println("ERROR: Fallo en SQL: " + e2.getMessage());
-        }/* finally {
+        } catch (SQLException exception) {
+            System.out.println("Error BD: " + exception);
+        } catch (ClassNotFoundException notFoundException) {
+            System.out.println("ERROR:No encuentro el driver de la BD: " + notFoundException.getMessage() + "<br />");
+        } /* finally {
          try {
          if (conexion != null) {
          conexion.close();
@@ -71,31 +66,32 @@ public class DataBase {
         return rows;
     }
 
-    public String insertRow(Connection conexion, String statInsert) {
+    public String updateRow(Connection conexion, String statInsert) {
         try {
-        Statement stmt = conexion.createStatement();
+            Statement stmt = conexion.createStatement();
 
-        //save the select statement in a string
+            //save the select statement in a string
         /*"INSERT INTO DBINDEXADOR.CIUDADES_CTC (NOMBRE, CODIGO) VALUES ('Monteria', '99001')"*/
-        /*INSERT INTO DBINDEXADOR.AF_GASTOS_DIARIOS (FECHA, CONCEPTO, VALOR, NOTAS, ID_GASTO) 
-	VALUES ('2014-01-20 12:50:44.047', 'Maquina Pragma', 1400, '', 2)*/
-       
-       String statInsert2 =  "INSERT INTO AF_GASTOS_DIARIOS (FECHA, CONCEPTO, VALOR, NOTAS, ID_GASTO)" +
-	"VALUES (TO_DATE('2014-01-20 12:50:44.047', 'MM/DD/YYYY HH:MI AM'), 'Tinto2', 1920, NULL, 6)";
-         
+            /*INSERT INTO DBINDEXADOR.AF_GASTOS_DIARIOS (FECHA, CONCEPTO, VALOR, NOTAS, ID_GASTO) 
+             VALUES ('2014-01-20 12:50:44.047', 'Maquina Pragma', 1400, '', 2)*/
 
-        //create a result set
-        stmt.executeUpdate(statInsert);
-        
-        return "update";
-        }catch(SQLException exc){
-            System.out.println("Insert: "+exc);
+            String statInsert2 = "INSERT INTO AF_GASTOS_DIARIOS (FECHA, CONCEPTO, VALOR, NOTAS, ID_GASTO)"
+                    + "VALUES (TO_DATE('2014-01-20 12:50:44.047', 'MM/DD/YYYY HH:MI AM'), 'Tinto2', 1920, NULL, 6)";
+
+
+            //create a result set
+            stmt.executeUpdate(statInsert);
+
+            return "update";
+        } catch (SQLException exc) {
+            System.out.println("Insert: " + exc);
             return "error: " + exc;
         }
     }
 
-    public String showResult(ResultSet rows) throws SQLException {
+    public String showResult(ResultSet rows) {
         int count = 0;
+        int columnas = 0;
         String result = "";
         String isPar = "";
 
@@ -103,24 +99,37 @@ public class DataBase {
         result += "<th>FECHA</th>";
         result += "<th>CONCEPTO</th>";
         result += "<th>VALOR</th>";
-        result += "<th>NOTAS</th>";
+        result += "<th>CATEGORIA</th>";
         result += "</tr>";
-        while (rows.next()) {
+        try {
+
+            while (rows.next()) {
+                
+                columnas = rows.getMetaData().getColumnCount();                
+                                
+                count += 1;
+                isPar = count % 2 == 0 ? "par" : "impar";
+                result += "<tr class='" + isPar + "'>";
+                while(columnas > 1){
+                    /* <a href="#" id="username" data-type="text" data-pk="1" data-url="/post" data-title="Enter username">superuser</a> */
+                    //result += "<td><a href='#' id='username' data-type='text' data-pk='1' data-url='/post' data-title='Enter username'>" + rows.getString(columnas) + "</a></td>";
+                    result += "<td class='dato_gasto'>" + rows.getString(columnas) + "</td>";
+                    columnas--;
+                }       
+                result += "<td id='columna_gasto_"+rows.getString(1)+"'><a href='javascript:;' onclick='javascript:eliminarGasto("+rows.getString(1)+")'>Eliminar</a>|<a href='javascript:;' onclick='javascript:editarGasto("+rows.getString(1)+", this)'>Editar</a></td>";
+                result += "</tr>";                
+                
+            }
+            result += "</table>";
 
 
-            count += 1;
-            isPar = count % 2 == 0 ? "par" : "impar";
-            result += "<tr class='" + isPar + "'>";
-            result += "<td>" + rows.getString(1) + "</td>";
-            result += "<td>" + rows.getString(2) + "</td>";
-            result += "<td>" + rows.getString(3) + "</td>";
-            result += "<td>" + rows.getString(4) + "</td>";
-            result += "</tr>";
+        } catch (SQLException exception) {
+            System.out.println("Exception: " + exception.getMessage());
+             result += "<tr>";
+             result += "Sin datos";  
+             result += "</tr>";  
         }
-        result += "</table>";
 
         return result;
     }
-
-    
 }

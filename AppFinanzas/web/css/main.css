@@ -1,6 +1,7 @@
 .fila {
     float: left;
-    width: 100%;
+    /*width: 100%;*/
+    width: 85%;
     /*background: #58c03c;*/
 }
 
@@ -13,13 +14,29 @@
     width: 80%;
 }
 
+div.seccionGastos {
+    clear: both;
+}
+
 div.seccionGastos table {
     border-collapse: collapse;
-    width: 99.9%;
+    width: 100%;
 }
 
 div.seccionGastos table tr td {
     border: 1px solid #000;
+}
+
+div.seccionGastos table tr:hover td {
+    background: #ebebeb;
+}
+
+div.seccionGastos table tr > td:nth-child(1) {
+    text-align: center;
+}
+
+div.seccionGastos table tr > td:nth-child(5) {
+    text-align: center;
 }
 
 div.seccionCuentas table {
@@ -44,4 +61,12 @@ div.seccionCuentas input {
     color: #222;
     border: 1px solid #CECECE;
     font-family: 'Open Sans', sans-serif;
+}
+
+.tabla-presupuesto label.error_characters {    
+    color: #ff5247 !important;
+}
+
+.tabla-presupuesto input.error_characters {
+    border: 1px solid #ff5247 !important;    
 }

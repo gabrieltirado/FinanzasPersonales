@@ -40,9 +40,9 @@
             <div class="wrap"> 
                 <div class="slider-left">
                     <em> </em>
-                    <h1>Premimum Design Graphic Resources Center</h1>
-                    <p>We Offer high quality design resources such as fonts, icons sets,web templates,backgrounds,and much more for <span>FREE!</span></p>
-                    <label>Join our mailling list &amp; recevie a new freebie everday!</label>
+                    <h1>Aplicación de Finanzas Personales</h1>
+                    <p>Esta aplicación te ayudará a controlar el movimiento de tu flujo de efectivo para ser financieramente <span>Libre!</span></p>
+                    <label>Subscribete y recibe articulos de educación financiera</label>
                     <form>
                         <input type="text" class="textbox" value="Email address.." onfocus="this.value = '';" onblur="if (this.value == '') {
             this.value = 'Email address..';
